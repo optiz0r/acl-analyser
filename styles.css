@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+}
+
+#container {
+    width: 100%;
+}
+
+#header_container {
+    /* noop */
+}
+
+#input_container {
+
+}
+
+#output_container {
+
+}
+
+#template_container {
+    display: none;
+}
+
+.error {
+    background: salmon;
+    border: 1px solid red;
+}
+
+label {
+    font-size: bigger;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 20em;
+    width: 100%;
+
+    margin: 1em;
+
+    /*white-space: nowrap;*/
+}
+

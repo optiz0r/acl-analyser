@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Cisco FWSM ACL Analyser</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script src="js/jquery-1.4.2.min.js"></script>
+        <script src="js/jquery-ui-1.8.4.custom.min.js"></script>
+        <script src="js/jquery.busy.min.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header_container">
+                <h1>Cisco FWSM ACL Analyser</h1>
+                <p>
+                This script will retabulate the output of <tt>showt</tt> commands in a FWSM context so that it can be loaded into a spreadsheet for analysis. The following show commands are supported:
+                </p>
+                <ul>
+                    <li><tt>show access-list</tt></li>
+                    <li><tt>show name</tt></li>
+                    <li><tt>show run object-group</tt> <em>(and subcommands)</em></tt>
+                    <li><tt>show run</tt> <em>(will not render access list entries)</em></tt>
+                </ul>
+            </div>
+            <div id="input_container">
+                <fieldset id="input_box">
+                    <legend for="input_box">Input</legend>
+
+                    <label for="input_autoupdate">
+                        <input type="checkbox" id="input_autoupdate" checked="checked" />
+                        Auto Update
+                    </label>
+
+                    <input type="button" id="input_update" value="Update" />
+
+                    <hr />
+
+                    <label for="input_config">Config</label>
+                    <textarea id="input_config"></textarea>
+
+                </fieldset>
+
+            <div id="output_container">
+                <fieldset id="output_container">
+                    <legend for="output_container">Output</legend>
+
+                    <label for="output_acls">Access Control Entries</label>
+                    <textarea id="output_acls"></textarea>
+
+                    <label for="output_objects">Object Definitions</label>
+                    <textarea id="output_objects"></textarea>
+
+                    <label for="output_groups">Object Group Definitions</label>
+                    <textarea id="output_groups"></textarea>
+
+                    <label for="output_services">Service Group Definitions</label>
+                    <textarea id="output_services"></textarea>
+
+                </fieldset>
+            </div>
+
+        </div>
+
+    </body>
+</html>
